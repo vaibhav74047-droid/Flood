@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloodGuard | Flood Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🌊 FloodGuard</div>
+    <div class="live"><span></span> SIMULATION ACTIVE</div>
+</header>
+
+<main>
+    <section class="welcome">
+        <div>
+            <p class="eyebrow">SMART FLOOD MONITORING SYSTEM</p>
+            <h1>Flood Risk Dashboard</h1>
+            <p>Monitor water levels, rainfall and emergency conditions.</p>
+        </div>
+        <div class="weather-icon">🌧️</div>
+    </section>
+
+    <section class="cards">
+        <article class="card">
+            <div class="card-icon">🌊</div>
+            <p>Water Level</p>
+            <h2 id="waterValue">LOW</h2>
+            <span>Simulated sensor</span>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">🌧️</div>
+            <p>Rainfall Status</p>
+            <h2 id="rainValue">NORMAL</h2>
+            <span>Rain sensor</span>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">🚨</div>
+            <p>Emergency Alert</p>
+            <h2 id="alertValue">OFF</h2>
+            <span>Alert output</span>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">🔔</div>
+            <p>Buzzer Status</p>
+            <h2 id="buzzerValue">OFF</h2>
+            <span>Buzzer output</span>
+        </article>
+    </section>
+
+    <section class="monitor">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">SYSTEM CONTROL</p>
+                <h2>Sensor Simulation</h2>
+            </div>
+            <span class="badge">MANUAL MODE</span>
+        </div>
+
+        <label class="switch-row">
+            <span>🌊 High Water Level</span>
+            <input type="checkbox" id="waterInput">
+        </label>
+
+        <label class="switch-row">
+            <span>🌧️ Heavy Rainfall</span>
+            <input type="checkbox" id="rainInput">
+        </label>
+
+        <label class="switch-row">
+            <span>⚠️ Critical Water Level</span>
+            <input type="checkbox" id="criticalInput">
+        </label>
+
+        <button id="resetButton">↻ Reset Sensors</button>
+    </section>
+
+    <section class="risk-panel" id="riskPanel">
+        <div class="risk-symbol" id="riskIcon">✓</div>
+        <div>
+            <p class="eyebrow">CURRENT FLOOD ASSESSMENT</p>
+            <h2 id="riskTitle">NORMAL CONDITIONS</h2>
+            <p id="riskDescription">No immediate flood warning in this simulation.</p>
+        </div>
+        <div class="risk-level">
+            <span>RISK LEVEL</span>
+            <strong id="riskNumber">0 / 3</strong>
+        </div>
+    </section>
+
+    <section class="logic-panel">
+        <h2>System Information</h2>
+        <
